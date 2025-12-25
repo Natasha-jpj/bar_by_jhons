@@ -158,20 +158,32 @@ export default function Home() {
         </section>
 
         {/* Full-width hero section */}
+
         <div className="relative z-20 w-full" style={{ background: 'linear-gradient(135deg, #fffbe6 0%, #f7e7ce 60%, #e6c77f 100%)' }}>
           <FullImageHero />
         </div>
 
-        <div style={{ background: 'linear-gradient(135deg, #fffbe6 0%, #f7e7ce 60%, #e6c77f 100%)' }}>
+        {/* About Section (ImageLayout) */}
+        <section id="about">
           <ImageLayout />
-        </div>
-        
-        <EventsHeroSection />
-<SeasonalSpecials />
+        </section>
+
+        {/* Events Section (EventsHero) */}
+        <section id="events">
+          <EventsHeroSection />
+        </section>
+
+        <SeasonalSpecials />
+
+        {/* Packages Section (PackageCollage) */}
         <section id="packages">
-        <PackageCollage />
-      </section>
-<Footer />
+          <PackageCollage />
+        </section>
+
+        {/* Contact Section (Footer) */}
+        <section id="contact">
+          <Footer />
+        </section>
 
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');

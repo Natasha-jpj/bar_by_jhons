@@ -23,7 +23,7 @@ export default function FullImageHero() {
             Discover a curated menu of classic and contemporary cocktails, crafted with passion and precision. Experience the art of mixology in a welcoming, stylish setting.
           </p>
           {/* Link with Gold (#D4AF37) border/text accent */}
-          <a href="#menu" className="inline-block px-0 py-0 bg-transparent text-[#1a1a1a] font-bold uppercase tracking-wide hover:text-[#9B1C31] transition text-base md:text-lg self-center md:self-start border-b-2 border-[#D4AF37]" style={{ letterSpacing: '0.08em' }}>
+          <a href="#packages" className="inline-block px-0 py-0 bg-transparent text-[#1a1a1a] font-bold uppercase tracking-wide hover:text-[#9B1C31] transition text-base md:text-lg self-center md:self-start border-b-2 border-[#D4AF37]" style={{ letterSpacing: '0.08em' }}>
             VIEW OUR MENU <span aria-hidden="true">&rarr;</span>
           </a>
         </div>

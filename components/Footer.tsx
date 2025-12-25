@@ -68,7 +68,7 @@ export default function Footer() {
             <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Explore</h5>
             <Link href="/" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Home</Link>
             <Link href="#packages" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Packages</Link>
-            <Link href="#gallery" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Gallery</Link>
+            <Link href="#events" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Events</Link>
             <Link href="#about" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">About Us</Link>
           </div>
 
