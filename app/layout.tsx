@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display, Montserrat } from 'next/font/google';
 import './globals.css';
-import Link from 'next/link';
-import Image from 'next/image';
+import Navbar from '@/components/Navbar'; 
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
 
 export const metadata: Metadata = {
   title: 'Bar by John - Premium Mobile Bar Service',
@@ -17,27 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-black`}>
-        {/* Centered Header with Logo */}
-        <header className="site-header fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-center transition-opacity duration-500">
-          <Link href="/" className="inline-block">
-            <div className="relative w-28 h-28 md:w-36 md:h-36">
-              <Image
-                src="/logooo.png" // Your logo file
-                alt="Bar by John"
-                fill
-                className="object-contain hover:scale-110 transition-transform duration-300"
-                priority
-              />
-            </div>
-          </Link>
-        </header>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${montserrat.variable}`}>
+      {/* ✅ CLEAN BODY TAG: No inline styles or overflow classes */}
+      <body className="antialiased">
+        
 
-        {/* Main Content */}
         <main>
           {children}
         </main>
+        
       </body>
     </html>
   );

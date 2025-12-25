@@ -25,7 +25,15 @@ const HeroContent = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group relative px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/30">
+          <button
+            className="group relative px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            style={{
+              background: 'var(--color-primary-crimson)',
+              color: 'var(--color-soft-ivory)',
+              border: '2px solid var(--color-antique-gold)',
+              boxShadow: '0 2px 12px #8C1D1844',
+            }}
+          >
             <span className="flex items-center gap-2">
               View Our Menu
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,8 +41,15 @@ const HeroContent = () => {
               </svg>
             </span>
           </button>
-          
-          <button className="px-8 py-4 bg-transparent border-2 border-white hover:border-amber-400 text-white hover:text-amber-400 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+          <button
+            className="px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105"
+            style={{
+              background: 'var(--color-antique-gold)',
+              color: 'var(--color-charcoal-black)',
+              border: '2px solid var(--color-primary-crimson)',
+              boxShadow: '0 2px 12px #C9A24D44',
+            }}
+          >
             Book a Table
           </button>
         </div>
