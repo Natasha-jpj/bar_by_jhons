@@ -33,7 +33,7 @@ export default function FullImageHero() {
       <div className="w-full max-w-7xl mx-auto mt-8 md:mt-12 px-2 sm:px-4">
         <div className="w-full rounded-md shadow-xl overflow-hidden border border-[#D4AF37]">
           <Image
-            src="/style.jpg"
+            src="/menuu.jpeg"
             alt="Bar by John Signature Cocktail"
             width={1600}
             height={500}

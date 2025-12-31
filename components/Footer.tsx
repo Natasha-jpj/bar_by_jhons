@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Link from "next/link";
 import { useState } from "react";
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F9F6F0] text-slate-900 pt-24 pb-12 relative overflow-hidden border-t border-[#D4AF37]/20">
       
-      {/* Texture Overlay (Optional, matches your other sections) */}
+      {/* Texture Overlay */}
       <div className="absolute inset-0 opacity-40 pointer-events-none mix-blend-multiply" 
            style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}>
       </div>
@@ -21,9 +21,8 @@ export default function Footer() {
           
           {/* Logo / Brand Area */}
           <div className="max-w-md">
-            {/* Replace with your logo image if you have one, currently using text */}
             <div className="flex flex-col items-start">
-               <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold mb-2">Est. 2024</span>
+               <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold mb-2">Est. 2025</span>
                <h2 className="text-4xl font-serif text-slate-900 leading-none mb-6">
                  BAR BY <span className="text-[#9B1C31] italic">JOHN</span>
                </h2>
@@ -33,7 +32,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Newsletter Section (Maxwell Style) */}
+          {/* Newsletter Section */}
           <div className="w-full lg:w-auto min-w-[300px]">
             <h4 className="font-serif text-xl mb-6">Join our Guest List</h4>
             <form className="flex flex-col gap-4">
@@ -45,7 +44,6 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-transparent border-b border-slate-300 py-3 text-slate-900 focus:outline-none focus:border-[#D4AF37] transition-colors placeholder:text-slate-400 font-light"
                 />
-                {/* Animated Arrow Button */}
                 <button 
                   type="submit" 
                   className="absolute right-0 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#9B1C31] transition-colors"
@@ -81,30 +79,55 @@ export default function Footer() {
             <Link href="#" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Masterclasses</Link>
           </div>
 
-          {/* Column 3 */}
-          <div className="flex flex-col gap-4">
-            <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Contact</h5>
-            <a href="mailto:hello@barbyjohn.com" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">hello@barbyjohn.com</a>
-            <a href="tel:6478663017" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">6478663017</a>
-            <span className="text-slate-600 font-light">GTA, Canada</span>
-          </div>
+       {/* Column 3: Updated Contact with WhatsApp & Pre-filled Text */}
+<div className="flex flex-col gap-4">
+  <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Contact</h5>
+  <span className="text-slate-600 font-light">
+    info@barbyjohn.com
+  </span>
+  
+  {/* WhatsApp Link with Pre-filled Text */}
+  <a 
+    href="https://wa.me/16478663017?text=Hi John, I'm interested in booking your bar service for an upcoming event. Could you provide more details on your packages?" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-slate-600 hover:text-[#25D366] transition-colors font-light flex items-center gap-2"
+  >
+    Click here to chat [6478663017]
+  </a>
 
-           {/* Column 4: Socials */}
-           <div className="flex flex-col gap-4">
-            <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Follow</h5>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
-                IG
-              </a>
-              <a href="#" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all">
-                FB
-              </a>
-            </div>
-          </div>
+  <span className="text-slate-600 font-light whitespace-pre-line">GTA, Canada</span>
+</div>
+
+         {/* Column 4: Socials */}
+<div className="flex flex-col gap-4">
+  <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Follow</h5>
+  <div className="flex gap-4">
+    {/* Instagram Link */}
+    <a 
+      href="https://www.instagram.com/barbyjohn2026/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-xs"
+    >
+      IG
+    </a>
+    
+    {/* Facebook Link */}
+    <a 
+      href="https://www.facebook.com/profile.php?id=61585694137437" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-xs"
+    >
+      FB
+    </a>
+  </div>
+</div>
 
         </div>
 
-        {/* MASSIVE FOOTER TEXT (Maxwell Style) */}
+        {/* MASSIVE FOOTER TEXT */}
         <div className="w-full overflow-hidden border-b border-slate-200 mb-8">
            <h1 className="text-[12vw] md:text-[13vw] leading-[0.8] font-serif text-center text-[#D4AF37] opacity-20 select-none whitespace-nowrap">
             BAR BY JOHN

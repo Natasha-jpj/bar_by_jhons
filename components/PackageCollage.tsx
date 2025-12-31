@@ -15,8 +15,8 @@ const labels = ['BASIC', 'MODERATE', 'PREMIUM'];
 
 const descriptions = [
   { title: 'BASIC', rate: 'Starting at $90/hour' },
-  { title: 'MODERATE', rate: 'Custom Quote' },
-  { title: 'PREMIUM', rate: 'Custom Quote' }
+  { title: 'MODERATE', rate: '' },
+  { title: 'PREMIUM', rate: '' }
 ];
 
 export default function PackageCollage() {
