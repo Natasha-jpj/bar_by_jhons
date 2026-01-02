@@ -1,22 +1,20 @@
 "use client"
 
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-
   return (
-    <footer className="bg-[#F9F6F0] text-slate-900 pt-24 pb-12 relative overflow-hidden border-t border-[#D4AF37]/20">
+    /* ADDED ID HERE: id="booking-section" */
+    <footer id="booking-section" className="bg-[#F9F6F0] text-slate-900 pt-24 pb-12 relative overflow-hidden border-t border-[#D4AF37]/20 font-sans">
       
-      {/* Texture Overlay */}
+      {/* Texture Overlay for luxury depth */}
       <div className="absolute inset-0 opacity-40 pointer-events-none mix-blend-multiply" 
            style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         
-        {/* TOP ROW: Brand & Newsletter */}
+        {/* TOP ROW: Brand & Appointment Calendar */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
           
           {/* Logo / Brand Area */}
@@ -24,7 +22,7 @@ export default function Footer() {
             <div className="flex flex-col items-start">
                <span className="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold mb-2">Est. 2025</span>
                <h2 className="text-4xl font-serif text-slate-900 leading-none mb-6">
-                 BAR BY <span className="text-[#9B1C31] italic">JOHN</span>
+                 BAR BY <span className="text-[#9B1C31] italic uppercase">John</span>
                </h2>
             </div>
             <p className="text-slate-600 font-light leading-relaxed">
@@ -32,118 +30,89 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Newsletter Section */}
-          <div className="w-full lg:w-auto min-w-[300px]">
-            <h4 className="font-serif text-xl mb-6">Join our Guest List</h4>
-            <form className="flex flex-col gap-4">
-              <div className="relative group">
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-b border-slate-300 py-3 text-slate-900 focus:outline-none focus:border-[#D4AF37] transition-colors placeholder:text-slate-400 font-light"
-                />
-                <button 
-                  type="submit" 
-                  className="absolute right-0 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#9B1C31] transition-colors"
-                >
-                  →
-                </button>
-              </div>
-              <p className="text-xs text-slate-400 font-light mt-2">
-                Receive exclusive seasonal menus and event tips.
-              </p>
-            </form>
+          {/* Appointment Calendar */}
+          <div className="w-full lg:max-w-2xl">
+            <h4 className="font-serif text-2xl mb-2 text-slate-900">Have an Upcoming Event?</h4>
+            <p className="text-[#D4AF37] tracking-widest uppercase text-[10px] font-bold mb-8 italic">Secure Your Date Instantly</p>
+            
+            <div className="bg-white p-2 shadow-2xl border border-[#D4AF37]/30 rounded-lg overflow-hidden relative">
+                <div className="absolute inset-0 pointer-events-none border-[8px] border-white z-10"></div>
+                
+                <iframe 
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1RtrTnTaZDdYxr3NFxyRVU3cGKE4nArkXvFtN4eyrgvSkvu4D9Gha9F79-rUjd-B0GFtCicEGM?gv=true" 
+                  style={{ border: 0 }} 
+                  width="100%" 
+                  height="600" 
+                  frameBorder="0"
+                  className="relative z-0 opacity-95 contrast-[1.02]"
+                ></iframe>
+            </div>
           </div>
         </div>
 
         {/* MIDDLE ROW: Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32 border-t border-slate-200 pt-12">
-          
-          {/* Column 1 */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32 border-t border-slate-200 pt-12 text-left">
           <div className="flex flex-col gap-4">
             <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Explore</h5>
-            <Link href="/" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Home</Link>
-            <Link href="#packages" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Packages</Link>
-            <Link href="#events" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Events</Link>
-            <Link href="#about" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">About Us</Link>
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="#packages" className="footer-link">Packages</Link>
+            <Link href="#events" className="footer-link">Events</Link>
+            <Link href="#about" className="footer-link">About Us</Link>
           </div>
 
-          {/* Column 2 */}
           <div className="flex flex-col gap-4">
             <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Services</h5>
-            <Link href="#" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Weddings</Link>
-            <Link href="#" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Corporate</Link>
-            <Link href="#" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Private Parties</Link>
-            <Link href="#" className="text-slate-600 hover:text-[#9B1C31] transition-colors font-light">Masterclasses</Link>
+            <Link href="#" className="footer-link">Weddings</Link>
+            <Link href="#" className="footer-link">Corporate</Link>
+            <Link href="#" className="footer-link">Private Parties</Link>
+            <Link href="#" className="footer-link">Masterclasses</Link>
           </div>
 
-       {/* Column 3: Updated Contact with WhatsApp & Pre-filled Text */}
-<div className="flex flex-col gap-4">
-  <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Contact</h5>
-  <span className="text-slate-600 font-light">
-    info@barbyjohn.com
-  </span>
-  
-  {/* WhatsApp Link with Pre-filled Text */}
-  <a 
-    href="https://wa.me/16478663017?text=Hi John, I'm interested in booking your bar service for an upcoming event. Could you provide more details on your packages?" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-slate-600 hover:text-[#25D366] transition-colors font-light flex items-center gap-2"
-  >
-    Click here to chat [6478663017]
-  </a>
+          <div className="flex flex-col gap-4">
+            <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Contact</h5>
+            <span className="text-slate-600 font-light text-sm italic">info@barbyjohn2026.com</span>
+            <a 
+              href="https://wa.me/16478663017" 
+              target="_blank" rel="noopener noreferrer" 
+              className="text-slate-600 hover:text-[#25D366] transition-colors font-light text-sm flex items-center gap-2"
+            >
+              WhatsApp: [6478663017]
+            </a>
+            <span className="text-slate-600 font-light text-sm">Kathmandu, Nepal</span>
+          </div>
 
-  <span className="text-slate-600 font-light whitespace-pre-line">GTA, Canada</span>
-</div>
-
-         {/* Column 4: Socials */}
-<div className="flex flex-col gap-4">
-  <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Follow</h5>
-  <div className="flex gap-4">
-    {/* Instagram Link */}
-    <a 
-      href="https://www.instagram.com/barbyjohn2026/" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-xs"
-    >
-      IG
-    </a>
-    
-    {/* Facebook Link */}
-    <a 
-      href="https://www.facebook.com/profile.php?id=61585694137437" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all text-xs"
-    >
-      FB
-    </a>
-  </div>
-</div>
-
+          <div className="flex flex-col gap-4">
+            <h5 className="font-bold uppercase tracking-widest text-xs text-[#D4AF37] mb-2">Follow</h5>
+            <div className="flex gap-4">
+              <a href="https://www.instagram.com/barbyjohn2026/" target="_blank" className="social-icon">IG</a>
+              <a href="https://www.facebook.com/profile.php?id=61585694137437" target="_blank" className="social-icon">FB</a>
+            </div>
+          </div>
         </div>
 
-        {/* MASSIVE FOOTER TEXT */}
+        {/* MASSIVE BRAND TEXT */}
         <div className="w-full overflow-hidden border-b border-slate-200 mb-8">
-           <h1 className="text-[12vw] md:text-[13vw] leading-[0.8] font-serif text-center text-[#D4AF37] opacity-20 select-none whitespace-nowrap">
-            BAR BY JOHN
+           <h1 className="text-[12vw] md:text-[13vw] leading-[0.8] font-serif text-center text-[#D4AF37] opacity-20 select-none whitespace-nowrap uppercase tracking-tighter">
+             Bar by John
            </h1>
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 font-light uppercase tracking-wider">
-          <p>© {new Date().getFullYear()} Bar by John. All Rights Reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-             <Link href="#" className="hover:text-[#9B1C31]">Privacy Policy</Link>
-             <Link href="#" className="hover:text-[#9B1C31]">Terms of Service</Link>
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-400 font-light uppercase tracking-widest">
+          <p>© {new Date().getFullYear()} Bar by John. Luxury Mixology Services.</p>
+          <div className="flex gap-8 mt-4 md:mt-0">
+             <Link href="#" className="hover:text-[#9B1C31] transition-colors">Privacy Policy</Link>
+             <Link href="#" className="hover:text-[#9B1C31] transition-colors">Terms of Service</Link>
           </div>
         </div>
-
       </div>
+
+      <style jsx>{`
+        .footer-link { color: #475569; font-weight: 300; transition: color 0.3s; font-size: 0.875rem; text-decoration: none; }
+        .footer-link:hover { color: #9B1C31; }
+        .social-icon { width: 2.5rem; height: 2.5rem; border: 1px solid #cbd5e1; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; transition: all 0.3s; text-decoration: none; color: inherit; }
+        .social-icon:hover { border-color: #D4AF37; color: #D4AF37; transform: translateY(-2px); }
+      `}</style>
     </footer>
   );
 }
